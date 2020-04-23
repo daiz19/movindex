@@ -61,3 +61,5 @@ gem 'jquery-rails'
 
 gem 'acts_as_list'
 gem 'font-awesome-rails'
+
+gem 'carrierwave'

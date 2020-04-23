@@ -21,7 +21,9 @@
               <br/>
               <span><%= work.director.Director %></span>
             </div>
-            <img class="img-fluid" src="img/img_1.jpg"/>
+            <% if work.image_url %>
+              <%= image_tag work.image_url, class: 'img-fluid' %>
+            <% end %>
           <% end %>
         </div>
       <% end %>
