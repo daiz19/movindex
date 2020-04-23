@@ -17,6 +17,3 @@ module Movielog
     # the framework and any gems in your application.
   end
 end
-
-# config.load_defaults 6.0 to tackle H10 error
-config.autoload = :classic
