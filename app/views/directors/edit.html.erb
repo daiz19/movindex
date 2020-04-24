@@ -1,0 +1,8 @@
+<section class="section site-portfolio">
+<div class='container'>
+  <h2>Edit Director data</h2>
+  <%= render 'form' %>
+  <%= link_to 'Delete', director_path(@director), method: :delete, data: {confirm: 'sss sure?'} %>
+  <%= link_to 'Back', directors_path %>
+</div>
+</section>

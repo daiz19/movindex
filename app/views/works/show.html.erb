@@ -31,29 +31,3 @@
   </div>
 </div>
 </section>
-<div class="container">
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>Title</th>
-        <th>Dirctor</th>
-        <th>Year</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          <%= link_to @work.Title, edit_work_path %>
-        </td>
-        <td>
-          <%= link_to @work.director.Director, edit_director_path(@work.director_id) %>
-        </td>
-        <td>
-          <%= @work.ReleaseYear %>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<div class='col'><%= link_to 'Add movie', new_work_path, class: 'btn btn-primary' %></div>
-<div class='col'><%= link_to 'Add director', new_director_path, class: 'btn btn-success' %></div>

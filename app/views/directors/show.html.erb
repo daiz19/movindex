@@ -8,7 +8,11 @@
 <div class="container" data-aos="fade-up">
   <div class="row" id="portfolio-grid">
     <div class="col-6">
-      <img class="row mb-3 img-fluid" src="/img/img_4.jpg"/>
+      <% if @director.image_url %>
+        <%= image_tag @director.image_url, class: 'img-fluid mb-3' %>
+      <% else %>
+        <img src='/img/default.png', class='img-fluid mb-3'>
+      <% end %>
     </div>
     <div class='col-6'>
       <div class="row mb-3 align-items-center"><%= @director.Director %></div>
@@ -37,7 +41,11 @@
             <br/>
             <span><%= work.director.Director %></span>
           </div>
-          <img class="img-fluid" src="/img/img_6.jpg"/>
+          <% if work.image_url %>
+            <%= image_tag work.image_url(:thumb), class: 'img-fluid' %>
+          <% else %>
+            <img src='/img/default.png', class='img-fluid'>
+          <% end %>
         <% end %>
       </div>
     <% end %>
