@@ -17,7 +17,6 @@
           <%= link_to director_path(director), class: 'item-wrap fancybox' do %>
             <div class="work-info">
               <h3><%= director.Director %></h3>
-              <span><%= director.Country %></span>
             </div>
             <% if director.image_url %>
               <%= image_tag director.image_url(:thumb), class: 'img-fluid' %>

@@ -24,13 +24,15 @@
             <% if work.image_url %>
               <%= image_tag work.image_url(:thumb), class: 'img-fluid' %>
             <% else %>
-              <img src='/img/default_work.png', class='img-fluid'>
+              <img src='/img/default.png', class='img-fluid'>
             <% end %>
           <% end %>
         </div>
       <% end %>
     </div>
+  <%= paginate @works, class: 'item web' %>
 </div>
+
 </section>
 <div class="container">
   <%= link_to 'Add new movie', new_work_path, class: 'btn btn-outline-primary' %>

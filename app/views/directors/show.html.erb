@@ -2,33 +2,28 @@
 <div class="container">
   <h5>Director data</h5><br>
   <h2><%= @director.Director %></h2>
-  <div>Country: <%=@director.Country%></div>
 </div>
 
-<div class="container" data-aos="fade-up">
+<div class="container mt-3" data-aos="fade-up">
   <div class="row" id="portfolio-grid">
-    <div class="col-6">
+    <div class="col-8">
       <% if @director.image_url %>
         <%= image_tag @director.image_url, class: 'img-fluid mb-3' %>
       <% else %>
         <img src='/img/default.png', class='img-fluid mb-3'>
       <% end %>
     </div>
-    <div class='col-6'>
-      <div class="row mb-3 align-items-center"><%= @director.Director %></div>
+    <div class='col-4'>
+      <div class="row mb-3 align-items-center"><%= @director.Country %></div>
     </div>
   </div>
 
-  <div class='row mb-5'>
-    <div class='col-1'><%= link_to 'Edit', edit_director_path, class: 'btn btn-outline-info'%></div>
-    <div class='col-1'><%= link_to 'Delete', director_path, method: :delete, data: {confirm: 'sure?'}, class: 'btn btn-outline-dark' %></div>
-  </div>
-  <div class='row'>
-    <div class='col'><%= link_to 'Back', directors_path, class: 'btn btn-primary mb-5' %></div>
-  </div>
+
+    <%= link_to 'Edit', edit_director_path, class: 'btn btn-outline-info mr-2'%>
+    <%= link_to 'Delete', director_path, method: :delete, data: {confirm: 'sure?'}, class: 'btn btn-outline-dark' %>
 </div>
 
-<div class="container" data-aos="fade-up">
+<div class="container mt-5" data-aos="fade-up">
   <h5>Other movies of <%= @director.Director %></h5><br>
 
   <div class="row no-gutter" id="portfolio-grid" data-aos="fade-up" data-aos-delay="200">
@@ -50,9 +45,7 @@
       </div>
     <% end %>
   </div>
-
-
-
+  <%= link_to 'Back', directors_path, class: 'btn btn-primary mt-3 mb-3' %>
 </div>
 
 </section>
